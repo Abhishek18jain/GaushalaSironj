@@ -15,7 +15,9 @@ const Path = require("path");
 const engine = require('ejs-mate');
 const app = express();
 const port = 3000;
- mongoose.connect("mongodb://localhost:27017/").then(() => {
+const dbUrl = process.env.ATLASDB_URL;
+ mongoose.connect(dbUrl, {
+}).then(() => {
     console.log("Connected to MongoDB"
     );
 }).catch((err) => {
