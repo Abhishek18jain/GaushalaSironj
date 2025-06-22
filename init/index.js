@@ -18,8 +18,8 @@ async function startServer() {
   
   try {
     const user = await User.create({
-      username: 'Jinodayjeevdayakendrasironj@gmail.com',
-      password: 'Muni&hri@108'
+      username: '',
+      password: ''
     });
 
     console.log("✅ User created:", user);
