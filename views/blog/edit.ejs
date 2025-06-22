@@ -1,0 +1,13 @@
+    <%- include('../particles/navbar.ejs') %>
+    <link rel="stylesheet" href="/css/blog/edit.css">
+<h2 class="form-heading">✏️ Edit Blog Post</h2>
+<form action="/blogs/<%= blog._id %>/update" method="POST" class="blog-form">
+    <label for="title">Blog Title</label>
+  <input type="text" name="title" value="<%= blog.title %>" required>
+    <label for="image">Upload Image</label>
+  <input type="text" name="image" value="<%= blog.image.url %>">
+  <label for="content">Write abot the blog</label>
+  <textarea name="content" rows="10" required><%= blog.content %></textarea>
+  <button type="submit" class="btn-submit">💾 Update Blog</button>
+</form>
+<%- include('../particles/footer') %>

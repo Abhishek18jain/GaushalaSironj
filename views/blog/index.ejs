@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <link rel="stylesheet" href="/css/blog/blog.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+  </head>
+
+  <body>
+    <%- include('../particles/navbar') %>
+    <h1 class="blog-heading">📚 Our Blog</h1>
+<% if (currentUser) { %>
+    <div class="blog-header">
+  <a href="/blogs/new" class="btn">➕ Create Blog</a>
+  </div>
+    <% } %>
+    <div class="blog-container">
+      <% blogs.forEach(blog => { %>
+        <div class="blog-card">
+          <h2><%= blog.title %></h2>
+
+          <% if (blog.image || blog.image.url) { %>
+            <img
+              src="<%= blog.image.url %>"
+              alt="Blog Image"
+              class="blog-img"
+            />
+          <% } %>
+
+          <% const preview = blog.content.length > 250
+               ? blog.content.substring(0, 250) + "..."
+               : blog.content; %>
+
+          <p><%= preview %></p>
+
+          <% if (blog.content.length > 50) { %>
+            <a href="/blogs/<%= blog._id %>" class="btn-read-more">🔍 Read More</a>
+          <% } %>
+<% if (currentUser) { %>
+          <div class="blog-actions">
+            <form action="/blogs/<%= blog._id %>/edit" method="GET" class="btn-edit-form">
+              <button type="submit" class="btn-action btn-edit">✏️ Edit</button>
+            </form>
+            <form action="/blogs/<%= blog._id %>/delete" method="POST" class="btn-delete-form">
+              <button type="submit" class="btn-action btn-delete">🗑️ Delete</button>
+            </form>
+          </div>
+          <%}%>
+        </div>
+      <% }) %>
+    </div>
+
+    <%- include('../particles/footer') %>
+  </body>
+</html>

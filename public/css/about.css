@@ -1,0 +1,253 @@
+/* ====== Base Setup ====== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfcf7;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #2f3e46;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ====== Hero Section ====== */
+.about-hero {
+  background: linear-gradient(to bottom right, #f9efe5, #fff);
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.5), transparent);
+  top: -50%;
+  left: -50%;
+  animation: pulseBg 10s linear infinite;
+  z-index: 0;
+}
+
+@keyframes pulseBg {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.about-hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+  color: #5b3d1e;
+}
+
+.about-hero p {
+  font-size: 1.4rem;
+  color: #6e4b25;
+}
+
+/* ====== Container Styling ====== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ====== Story Section ====== */
+.about-story {
+  background-color: #fff8ec;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/* ====== Mission List ====== */
+.about-mission ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.about-mission li {
+  background-color: #fff;
+  border-left: 5px solid #8d5524;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 1.1rem;
+}
+
+/* ====== Value Cards ====== */
+.value-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 20px;
+  padding: 25px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== Join Reasons ====== */
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.reason-card {
+  background: #e9f5ec;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: scale(1.05);
+}
+
+.reason-card i {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #357960;
+}
+.about-hero {
+  background-color: #fef9f4;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #5c4033;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #6d4c41;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.container h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #3e2723;
+}
+
+.container p,
+.container li {
+  font-size: 1.2rem;
+  color: #4e342e;
+}
+
+.group-photo .group-img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.group-photo .caption {
+  font-style: italic;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #6d4c41;
+}
+
+.value-cards{
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.value-card,
+.reason-card {
+  background: #fffaf0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.value-card h3,
+.reason-card h3 {
+  font-size: 1.5rem;
+  color: #5d4037;
+  margin-bottom: 10px;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .about-hero p {
+    font-size: 1.1rem;
+  }
+
+  .value-cards{
+    display: grid;
+    flex-direction: column;
+    place-items: center;
+
+    grid-template-columns: 1fr;
+  }
+  .reasons-grid {
+    flex-direction: column;
+    grid-template-columns: repeat(2,1fr);
+  }
+}

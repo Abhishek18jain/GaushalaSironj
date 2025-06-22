@@ -1,0 +1,24 @@
+<%- include('../particles/navbar') %>
+<body>
+<link rel="stylesheet" href="/css/blog/show.css">
+<div class="blog-detail">
+  <h1><%= blog.title %></h1>
+
+  <% if (blog.image || blog.image.url) { %>
+    <img src="<%= blog.image.url %>" alt="Blog Image" style="max-width: 100%; border-radius: 12px;" />
+  <% } %>
+
+  <p style="margin-top: 20px;"><%= blog.content %></p>
+<% if(currentUser){%>
+<div class="blog-actions">
+  <form action="/blogs/<%= blog._id %>/edit" method="GET" class="btn-edit-form">
+    <button type="submit" class="btn-action btn-edit">✏️ Edit</button>
+  </form> 
+  <form action="/blogs/<%= blog._id %>/delete" method="POST" class="btn-delete-form">
+    <button type="submit" class="btn-action btn-delete">🗑️ Delete</button>
+  </form>
+</div>
+<%}%>
+</div>
+</body>
+<%- include('../particles/footer') %>

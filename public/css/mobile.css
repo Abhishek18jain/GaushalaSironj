@@ -1,0 +1,7 @@
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem!important }
+  h2 { font-size: 1.5rem !important; }
+  p  { font-size: 1rem !important; line-height: 1.6 !important; }
+  .service-box { padding: 12px !important; }
+}

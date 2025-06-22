@@ -1,0 +1,146 @@
+body{
+  background-color: #f9f9f9 !important;
+}
+.background-image{
+  margin:0 ;
+  border: solid black 0.5px;
+}
+.background-image img{
+  height: 35rem;
+  width: 100%;
+}
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8%;
+  margin-top: 1em;
+  padding: 0.5rem;
+  margin-bottom: 0;
+}
+
+.Heading-text {
+  font-size: 2em;
+  color: #000000;
+  text-align: center;
+}
+
+.Slogan-text {
+  font-size: 1.2em;
+  color: #302e2e;
+  text-align: center;
+  margin-top: 10px;
+}
+.image-text {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #72e368; /* dark background for contrast */
+  width: 100%;
+  /* gap: 1em; */
+  padding: 1em;
+  margin-top: 2%;
+  border-radius: 1.5rem;
+  max-height: 10%;
+  overflow: hidden;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
+}
+
+.text-container {
+  background: linear-gradient(135deg, #A5FA95, #C7FCC3);
+  width: 40%;
+  padding:1rem;
+  margin-top: 1.175em;
+  height: 93%;
+  /* max-height: 20%; */
+  border-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin-right: 0.1em; */
+}
+
+.text-heading {
+  color: #1e1e1e;
+  font-size: 2em;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.text-slogan {
+  color: #333;
+  font-weight: 500;
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 2rem;
+}
+
+.text-btn {
+  background-color: #72E368;
+  color: #000;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: 2px solid #000;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.text-btn:hover {
+  background-color: #5cc154;
+  color: white;
+  border-color: white;
+}
+
+.image-container {
+  width: 60%;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 100%;
+max-height: 99%;
+  border-radius: 1.5em;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 255, 85, 0.15);
+}
+
+.image-container {
+  height: 99%;
+}
+.mt-4{
+  margin: auto !important;
+  padding: 0.2em !important;
+}
+@media (max-width: 768px) {
+
+  /* Hero Section */
+  .heading-container {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .Heading-text {
+    font-size: 2.5rem !important;
+  }
+
+  .Slogan-text {
+    font-size: 1.5rem !important;
+    padding: 0 10px;
+  }
+
+  .donate-button .btn {
+    padding: 0.5rem 1.5rem !important;
+    font-size: 2rem !important;
+  }
+
+  .background-image img {
+    height: 20rem !important;
+    object-fit: cover;
+  }
+}

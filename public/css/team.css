@@ -1,0 +1,131 @@
+
+  .team-section {
+    background-color: #f9f9f9;
+    padding: 1em 1.4em;
+    text-align: center;
+  }
+
+  .team-section h2 {
+    font-size: 2rem;
+    color: #4b3200;
+    margin-bottom: 10px;
+  }
+
+  .team-intro {
+    font-size: 1rem;
+    color: #5c4d2d;
+    margin-bottom: 30px;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .team-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .team-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 14px;
+  }
+
+  .card-content h3 {
+    margin: 8px 0 4px;
+    font-size: 1.1rem;
+    color: #3b2a01;
+  }
+
+  .card-content .role {
+    color: #c08800;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .card-content .bio {
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 8px;
+  }
+
+  .social-links a {
+    color: #25d366;
+    font-size: 1.6rem;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: #128c7e;
+  }
+
+  .volunteer-btn-container {
+    margin-top: 30px;
+  }
+
+  .volunteer-btn {
+    background-color: #ffcc00;
+    color: #3b2a00;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .volunteer-btn:hover {
+    background-color: #ffb800;
+    transform: translateY(-3px);
+  }
+  @media (max-width: 600px) {
+  .team-section {
+    padding: 1em;
+  }
+
+  .team-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .team-intro {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+  }
+
+  .card-content .bio {
+    font-size: 0.8rem;
+  }
+
+  .volunteer-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

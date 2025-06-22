@@ -1,0 +1,174 @@
+/* blog.css */
+
+/* Page Heading */
+.blog-heading {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Header Button */
+.blog-header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-create {
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px 22px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-create:hover {
+  background-color: #27ae60;
+}
+
+/* Blog Container */
+.blog-container {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 0 40px 40px;
+  /* min-height: 70vh;  */
+}
+
+/* Blog Card */
+.blog-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  min-height: 40%;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Blog Title */
+.blog-card h2 {
+  font-size: 1.6rem;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+/* Blog Image */
+.blog-card img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Blog Preview */
+.blog-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Read More Button */
+.btn-read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.btn-read-more:hover {
+  color: #1c598a;
+  text-decoration: underline;
+}
+
+/* Actions: Edit + Delete */
+.blog-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+/* Common Button Styles */
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  height: 42px;
+  line-height: 1;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Edit Button Specific */
+.btn-edit {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #2980b9;
+}
+
+/* Delete Button Specific */
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+/* Remove default margin/padding of form */
+.btn-delete-form {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+.blog-card {
+  background: #fff;
+  padding: 1.5em;
+  margin: 1em 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* important */
+}
+
+.blog-actions {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.btn-action {
+  padding: 0.5em 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-edit {
+  background-color: #ffe066;
+}
+
+.btn-delete {
+  background-color: #ff6b6b;
+  color: white;
+}

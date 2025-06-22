@@ -1,0 +1,7 @@
+<%- include('../particles/navbar') %>
+
+<h2>🖼️ Upload New Gallery Image</h2>
+<form action="/gallery/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="image" accept="image/*" multiple required>
+  <button type="submit">Upload</button>
+</form>

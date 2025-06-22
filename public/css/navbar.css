@@ -1,0 +1,129 @@
+.custom-navbar {
+  background-color: #8B4513;
+  color: white;
+  font-family: sans-serif;
+  padding: 0.6em 1em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left Side: Logo + Social */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.navbar-brand img {
+  height: 60px;
+}
+
+.nav-social {
+  display: flex;
+  gap: 0.7em;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.3em;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #FFD700;
+}
+
+/* Center: Nav Links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 1.2em;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 0.6em;
+  padding: 6px 14px;
+  transition: background 0.3s, color 0.3s;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  background-color: #000;
+  color: #FFD700;
+}
+
+/* Right: Admin Button */
+.nav-join {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.6em 1em;
+    /* margin: 4em; */
+   /* margin-bottom: 2em; */
+    z-index: 1000;
+    width: 100%;
+    background-color: #8B4513;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4em;
+    height: 5em;
+    
+  }
+
+  .nav-left{
+    display: flex;
+      align-items: center;
+      flex-direction: row;
+    /* flex-wrap: wrap; */
+  }
+  .nav-social{
+    display: flex;
+    position: fixed;
+    /* position: relative; */
+    top: 3.6em;
+    left: 42%;
+
+  }
+  .nav-social a{
+font-size: 0.85em;
+  }
+  .nav-links 
+{
+  display:flex;
+  flex-direction: row;
+  gap: 0.28em;
+
+}
+.nav-join{
+  display: inline;
+}
+  .nav-link {
+    padding: 0.4em 0.8em;
+    /* margin: 0.2em 0; */
+    font-size: 0.65em;
+  }
+  .navbar-brand img{
+  height: 3em;
+  }
+  body{
+    padding-top: 4.4em;
+  }
+}

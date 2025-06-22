@@ -1,0 +1,29 @@
+<%- include('../particles/navbar') %>
+<link rel="stylesheet" href="/css/gallery/index.css">
+<div class="gallery-container">
+  <div class="gallery-header">
+    <h1>📸 Gaushala Gallery</h1>
+    <% if(currentUser){%>
+  <form action="/gallery/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+      <input type="file" name="image" accept="image/*" required>
+      <button type="submit">⬆️ Upload</button>
+    </form>
+    <%}%>
+  </div>
+
+  <div class="masonry-gallery">
+    <% images.forEach(img => { %>
+      <div class="masonry-item">
+      <a href="<%= img.image.url %>" data-lightbox="gaushala-gallery" data-title="Gaushala Image">
+  <img src="<%= img.image.url %>" alt="Gaushala Image" loading="lazy">
+</a>
+
+        <% if(currentUser){%>
+        <form action="/gallery/<%= img._id %>?_method=DELETE" method="POST" class="delete-form">
+          <button type="submit" onclick="return confirm('Delete this image?')">🗑️</button>
+        </form>
+        <%}%>
+      </div>
+    <% }) %>
+  </div>
+</div>

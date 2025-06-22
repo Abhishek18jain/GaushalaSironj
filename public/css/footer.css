@@ -1,0 +1,101 @@
+.site-footer {
+  background-color: #3b2a00;
+  color: #fefdfa;
+  padding: 50px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-about h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #ffcc00;
+}
+
+.footer-about p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #ffcc00;
+}
+.footer-contact p {
+  color: #ccc;
+  font-size: 1.1rem !important;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.footer-social {
+  margin-top: 12px;
+}
+
+.footer-social a {
+  color: #f3f6f5;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom  {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #f1eaea;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #f1eaea;
+}
+footer {
+  margin-top: 50px !important;
+}
+.Abhi{
+  color: #f3f6f5;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}

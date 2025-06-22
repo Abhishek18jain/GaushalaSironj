@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/css/navbar.css">
+
+<nav class="custom-navbar">
+  <div class="navbar-container">
+
+    <!-- Left: Logo + Social -->
+    <div class="nav-left">
+      <a class="navbar-brand" href="/">
+        <img src="/image/logo/317662786_1202301980352607_156887145635820723_n-removebg-preview.png" alt="Logo" />
+      </a>
+       <div class="nav-social">
+        <a href="https://www.facebook.com/share/16Dk33B53v/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/sudhasagar_gaushala" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://chat.whatsapp.com/DNwFV7ncaonIOsKg8uYugs" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+    </div>
+   
+    <!-- Center: Nav Links -->
+    <div class="nav-links">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/about">About Us</a>
+      <a class="nav-link" href="/donation">Donate</a>
+      <a class="nav-link" href="/blogs">Blogs</a>
+      <a class="nav-link" href="/gallery">Gallery</a>
+    </div>
+
+    <!-- Right: Admin Login -->
+    <div class="nav-join">
+      <% if (currentUser) { %>
+        <a href="/logout" class="nav-link">👤 Gau-Sevak</a>
+      <% } else { %>
+        <a href="/login" class="nav-link">🔐 Admin</a>
+      <% } %>
+    </div>
+
+  </div>
+</nav>
