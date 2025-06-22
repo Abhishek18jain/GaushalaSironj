@@ -1,3 +1,13 @@
+/* blog.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;  /* 👈 ye line horizontal scroll rokta hai */
+}
 .custom-navbar {
   background-color: #8B4513;
   color: white;
@@ -71,39 +81,28 @@
 /* Responsive */
 @media (max-width: 768px) {
   .navbar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0.6em 1em;
-    /* margin: 4em; */
-   /* margin-bottom: 2em; */
-    z-index: 1000;
     width: 100%;
     background-color: #8B4513;
     flex-direction: row;
     align-items: center;
     gap: 0.4em;
-    height: 5em;
-    
+    height: 4em;
   }
 
   .nav-left{
     display: flex;
       align-items: center;
       flex-direction: row;
-    /* flex-wrap: wrap; */
+      margin: 0;
   }
   .nav-social{
     display: flex;
-    position: fixed;
-    /* position: relative; */
-    top: 3.6em;
-    left: 42%;
-
+    gap: 0.3em;
+    margin: 0;
   }
   .nav-social a{
-font-size: 0.85em;
+font-size: 1.2em;
+
   }
   .nav-links 
 {
@@ -115,15 +114,16 @@ font-size: 0.85em;
 .nav-join{
   display: inline;
 }
+
   .nav-link {
     padding: 0.4em 0.8em;
     /* margin: 0.2em 0; */
     font-size: 0.65em;
   }
+  .navjoin.nav-link{
+  padding: 0.2em;
+}
   .navbar-brand img{
-  height: 3em;
-  }
-  body{
-    padding-top: 4.4em;
+  height: 3.2em;
   }
 }

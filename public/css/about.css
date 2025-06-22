@@ -1,4 +1,14 @@
 /* ====== Base Setup ====== */
+/* blog.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;  /* 👈 ye line horizontal scroll rokta hai */
+}
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -250,4 +260,7 @@ p {
     flex-direction: column;
     grid-template-columns: repeat(2,1fr);
   }
+    .nav-join{
+  display: none !important;
+}
 }

@@ -1,127 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;  /* 👈 ye line horizontal scroll rokta hai */
+}
+.donation-section {
+  background: linear-gradient(to right, #f4f9fc, #ffffff);
+  padding: 60px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
 
-      .donation-section {
-        background: linear-gradient(to right, #f4f9fc, #ffffff);
-        padding: 60px 20px;
-        font-family: 'Segoe UI', sans-serif;
-      }
+.donation-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
 
-      .donation-section h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        color: #2c3e50;
-        margin-bottom: 10px;
-      }
+.donation-section p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 40px;
+}
 
-      .donation-section p {
-        text-align: center;
-        font-size: 1.2rem;
-        color: #34495e;
-        margin-bottom: 40px;
-      }
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-      .contact-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 30px;
-        max-width: 1200px;
-        margin: auto;
-      }
+.left-box,
+.right-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
 
-      .left-box,
-      .right-box {
-        background: #ffffff;
-        padding: 30px;
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      }
+.left-box h3,
+.right-box h3 {
+  font-size: 1.3rem;
+  color: #2980b9;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #dce1e5;
+  padding-bottom: 5px;
+}
 
-      .left-box h3,
-      .right-box h3 {
-        font-size: 1.3rem;
-        color: #2980b9;
-        margin-bottom: 15px;
-        border-bottom: 1px solid #dce1e5;
-        padding-bottom: 5px;
-      }
+.left-box p,
+.right-box p,
+.right-box ul li {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
 
-      .left-box p,
-      .right-box p,
-      .right-box ul li {
-        font-size: 1rem;
-        color: #2c3e50;
-        margin-bottom: 10px;
-      }
+.right-box ul {
+  list-style: none;
+  padding-left: 0;
+}
 
-      .right-box ul {
-        list-style: none;
-        padding-left: 0;
-      }
+.whatsapp-link {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #128c7e;
+  font-weight: bold;
+}
 
-      .whatsapp-link {
-        display: block;
-        text-align: center;
-        margin-top: 15px;
-        text-decoration: none;
-        color: #128c7e;
-        font-weight: bold;
-      }
-
-      .qr-code {
-        width: 180px;
-        border-radius: 10px;
-        margin: 15px auto;
-        display: block;
-        border: 1px solid #ccc;
-      }
-
-    @media (max-width: 768px) {
-
+.qr-code {
+  width: 180px;
+  border-radius: 10px;
+  margin: 15px auto;
+  display: block;
+  border: 1px solid #ccc;
+}
+@media (max-width: 768px) {
   .donation-section {
-    padding: 40px 15px;
-  }
-
-  .donation-section h2 {
-    font-size: 2rem;
-    line-height: 1.3;
-    margin-bottom: 0.6em;
+    padding: 2.5em 1em;
+    width: 100%;
   }
 
   .donation-section p {
-    font-size: 1.4rem;
-    padding: 0 10px;
-    line-height: 1.5;
-  }
-
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .left-box,
-  .right-box {
-    padding: 20px;
-    font-size: 0.95rem;
-  }
-
-  .left-box h3,
-  .right-box h3 {
     font-size: 1.1rem;
+    line-height: 1.5;
   }
 
   .left-box p,
   .right-box p,
   .right-box ul li {
-    font-size:1.5rem;
+    font-size: 1rem;
     line-height: 1.5;
   }
 
-  .qr-code {
-    width: 150px;
-    margin: 10px auto;
+  .whatsapp-link p {
+    font-size: 1.1rem;
   }
 
-  .whatsapp-link p {
-    font-size: 1.35rem;
+  .qr-code {
+    max-width: 100%;
+    height: auto;
   }
+  .nav-join{
+  display: none !important;
 }
 
+}

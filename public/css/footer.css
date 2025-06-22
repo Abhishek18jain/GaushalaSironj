@@ -99,3 +99,50 @@ footer {
   transition: color 0.3s ease;
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns:1fr;   /* Ek column me convert */
+    gap: 0.5em;
+    padding: 0 0.5em;
+  }
+
+  .footer-about h3,
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .footer-about p,
+  .footer-contact p,
+  .footer-links ul li a {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  .footer-social {
+    margin-top: 10px;
+  }
+
+  .footer-social a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+  }
+
+  .footer-bottom {
+    font-size: 0.9rem;
+    padding: 15px 10px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .footer-bottom a.Abhi {
+    display: block;
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+}
