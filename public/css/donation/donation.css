@@ -8,7 +8,7 @@ html, body {
   overflow-x: hidden;  /* 👈 ye line horizontal scroll rokta hai */
 }
 .donation-section {
-  background: linear-gradient(to right, #f4f9fc, #ffffff);
+  background-color: #F7E1D4;
   padding: 60px 20px;
   font-family: "Segoe UI", sans-serif;
 }
@@ -81,6 +81,52 @@ html, body {
   display: block;
   border: 1px solid #ccc;
 }
+.action-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+  background-color: #F7E1D4;
+}
+
+.action-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 2px solid #f1e2c0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  padding: 20px;
+  min-height: 420px; /* ✅ Equal card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-6px);
+}
+
+.action-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.action-card h3 {
+  font-size: 1.4rem;
+  color: #a97400;
+  margin-bottom: 10px;
+}
+
+.action-card p {
+  font-size: 1rem;
+  color: #4b3200;
+  margin-top: auto; /* ✅ Push p to bottom for balance if needed */
+}
+
 @media (max-width: 768px) {
   .donation-section {
     padding: 2.5em 1em;
@@ -110,5 +156,51 @@ html, body {
   .nav-join{
   display: none !important;
 }
+.action-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  padding: 40px 20px;
 
+background-color: #F7E1D4;}
+
+.action-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 2px solid #f1e2c0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  padding: 20px;
+  min-height: 50%; /* ✅ Equal card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-6px);
+}
+
+.action-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.action-card h3 {
+  font-size: 1.6rem;
+  color: #a97400;
+  /* margin-bottom: 10px0; */
+}
+
+.action-card p {
+  font-size: 1rem;
+  color: #4b3200;
+}
+#WhatsApp{
+  text-decoration: none;
+}
 }

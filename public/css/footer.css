@@ -101,23 +101,27 @@ footer {
 }
 @media (max-width: 768px) {
   .footer-container {
-    grid-template-columns:1fr;   /* Ek column me convert */
+    /* display: flex; */
+grid-template-columns: repeat(2, 1fr) 2fr;
     gap: 0.5em;
     padding: 0 0.5em;
   }
 
+  .footer-contact{
+    display: inline;
+  }
   .footer-about h3,
   .footer-links h4,
   .footer-contact h4 {
-    font-size: 1.3rem;
+    font-size: 1em;
     text-align: left;
   }
 
   .footer-about p,
   .footer-contact p,
   .footer-links ul li a {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.85em !important;
+    /* line-height: 1.6; */
   }
 
   .footer-links ul {

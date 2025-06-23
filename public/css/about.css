@@ -12,7 +12,7 @@ html, body {
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #fdfcf7;
+  background-color: #fff1c6;
   color: #333;
 }
 
@@ -29,53 +29,11 @@ p {
   color: #444;
 }
 
-/* ====== Hero Section ====== */
-.about-hero {
-  background: linear-gradient(to bottom right, #f9efe5, #fff);
-  padding: 100px 20px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.about-hero::before {
-  content: '';
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.5), transparent);
-  top: -50%;
-  left: -50%;
-  animation: pulseBg 10s linear infinite;
-  z-index: 0;
-}
-
-@keyframes pulseBg {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-
-.about-hero .hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-.about-hero h1 {
-  font-size: 3.5rem;
-  color: #5b3d1e;
-}
-
-.about-hero p {
-  font-size: 1.4rem;
-  color: #6e4b25;
-}
-
 /* ====== Container Styling ====== */
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 40px 20px 40px 0;
 }
 
 /* ====== Story Section ====== */
@@ -241,26 +199,55 @@ p {
 
 /* ====== Responsive Design ====== */
 @media (max-width: 768px) {
-  .about-hero h1 {
-    font-size: 2.4rem;
-  }
-
-  .about-hero p {
-    font-size: 1.1rem;
-  }
-
+ .container h2{
+  color: #000;
+  font-weight: 800 !important;
+  font-size: 2.4em !important;
+  /* text-decoration: underline; */
+ }
+ .container p{
+color: #000 !important;
+  font-weight: 500 !important;
+  font-size: 1.6em !important;
+ }
   .value-cards{
     display: grid;
     flex-direction: column;
     place-items: center;
-
     grid-template-columns: 1fr;
+    padding: 0;
   }
   .reasons-grid {
     flex-direction: column;
     grid-template-columns: repeat(2,1fr);
+    padding: 0;
   }
     .nav-join{
   display: none !important;
+}
+.group-photo{
+  padding: 0 0 0 0 !important;
+}
+.group-photo .container{
+  padding: 0 !important;
+}
+.about-mission{
+  padding: 0 !important;
+}
+.about-values{
+  padding: 0 !important;
+  
+}
+.about-values .container{
+  padding: 0;
+}
+.value-card{
+  background-color: white;
+}
+.join-reasons{
+  padding: 0;
+}
+.reason-card{
+  background-color: #fff;
 }
 }

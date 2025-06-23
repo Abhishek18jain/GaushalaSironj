@@ -9,7 +9,7 @@ html, body {
   overflow-x: hidden;  /* 👈 ye line horizontal scroll rokta hai */
 }
 body{
-  background-color: #f9f9f9 !important;
+  background-color: #f7e1d4 !important;
 }
 .background-image{
   margin:0 ;
@@ -32,13 +32,13 @@ body{
 
 .Heading-text {
   font-size: 2em;
-  color: #000000;
-  text-align: center;
+  font-weight: 800;
+text-align: center; color: rgb(0, 0, 0);
 }
 
 .Slogan-text {
   font-size: 1.2em;
-  color: #302e2e;
+  color: #000000;
   text-align: center;
   margin-top: 10px;
 }
@@ -71,7 +71,7 @@ body{
 }
 
 .text-heading {
-  color: #1e1e1e;
+  color: #000000;
   font-size: 2em;
   font-weight: 800;
   margin-bottom: 1rem;
@@ -134,14 +134,21 @@ max-height: 99%;
     padding: 1rem;
     margin-top: 1rem;
   }
-
-  .Heading-text {
+h1{
+  color: #000 !important;
+}
+ #ya {
     font-size: 2.5rem !important;
+    text-decoration:underline ;
+    font-weight: 800;
+    color: #000 !important;
   }
 
-  .Slogan-text {
+  #sansar {
     font-size: 1.5rem !important;
-    padding: 0 10px;
+    padding: 0 5px;
+    font-weight: 600 !important;
+    color: #000 !important;
   }
 
   .donate-button .btn {
@@ -155,5 +162,37 @@ max-height: 99%;
   }
     .nav-join{
   display: none !important;
+}
+body{
+  background-color: #f7e1d4 !important;
+}
+.donate-button{
+ max-height:5em;
+ max-width: 12em;
+  padding: 0.3em 0.3em;
+  background-color: white;
+  border-radius: 2em ;
+  display: flex;
+  align-items: center;
+   /* transform: translateY(-0.4em) scale(1.1); */
+}
+.btn-donate{
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 0.5em 0.7em ;
+  background-color: #FF5722;
+  border-radius: 2em;
+  color: white;
+  box-shadow: white;
+}
+.btn-donate:hover{
+  background-color: #1d8b13;
+  border-radius: 2em;
+  color:white ;
+  transform: scale(1.2);
+  box-shadow: white;
+
+
 }
 }
