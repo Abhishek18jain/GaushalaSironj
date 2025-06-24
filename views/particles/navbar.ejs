@@ -19,8 +19,10 @@
     <!-- Center: Nav Links -->
     <div class="nav-links">
       <a class="nav-link" href="/">Home</a>
-      <a class="nav-link" href="/about" id="about imp">About Us</a>
-      <a class="nav-link" href="/donation" id="Donate">Donate</a>
+      <% if (!currentUser) { %>
+  <a class="nav-link" href="/about" id="about">About Us</a>
+  <a class="nav-link" href="/donation" id="Donate">Donate</a>
+<% } %>
       <a class="nav-link" href="/blogs" id="blogs">Blogs</a>
       <a class="nav-link" href="/gallery" id="gallery">Gallery</a>
     </div>

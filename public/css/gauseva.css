@@ -109,7 +109,7 @@ section h2 {
    /* Help Options */
    .help-section{
     margin-top: 1em;
-        max-width: 80%;
+        max-width: 90%;
    }
   .help-options {
     grid-template-columns: repeat(2,1fr);
@@ -132,4 +132,11 @@ section h2 {
   text-decoration: none;
   color: inherit;
 }
+section{
+  max-width: 75%;
+}
+.seva-card{
+  padding: 1em;
+}
+
 }
