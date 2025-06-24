@@ -1,5 +1,5 @@
 .impact-section {
-  background-color:#fff1c6;
+  background-color:#F7E1D4;
   padding: 0px 20px 20px 10px ;
   text-align: center;
 }
@@ -12,7 +12,7 @@
 
 .impact-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
@@ -46,12 +46,11 @@
 
 .impact-card p {
   font-size: 1.1rem;
-  color: white;
+  color: white !important;
   margin: 0;
 }
 .impact-card:hover {
   transform: scale(1.05);
-    /* background-color: #ffa6009e; */
   color: #fff !important ;
 }
 .impact-card:hover,
@@ -76,7 +75,7 @@
     font-size: 1.5rem !important;
     color: white !important;
   }
-  .impact-card:hover{
+  .impact-card{
     color: #fff;
 
   }
@@ -86,5 +85,8 @@
   gap: 30px;
   max-width: 350px;
   margin: 0 auto;
+}
+#para{
+  color: #fff !important;
 }
 }

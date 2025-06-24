@@ -45,11 +45,7 @@ html, body {
     column-count: 2;
   }
 }
-@media (max-width: 480px) {
-  .masonry-gallery {
-    column-count: 1;
-  }
-}
+
 .masonry-item {
   break-inside: avoid;
   margin-bottom: 1rem;
@@ -92,3 +88,15 @@ html, body {
   right: 10px !important;
   background-size: 35px 35px !important;
 }
+@media (max-width: 500px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+
+ #about{
+      display: none;
+    }
+    #gallery{
+      display: none !important;
+    }
+    }

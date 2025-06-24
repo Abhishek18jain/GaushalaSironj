@@ -50,7 +50,7 @@ app.get("/", (req, res) => {
     res.render("./pages/index.ejs");
 });
 app.get("/about",(req,res)=>{
-    res.render("./pages/about.ejs")
+    res.render("./about/about.ejs")
 })
 app.get("/donation", (req,res)=>{
     res.render("./donation/donation.ejs")

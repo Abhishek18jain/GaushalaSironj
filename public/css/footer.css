@@ -100,53 +100,80 @@ footer {
   text-decoration: none;
 }
 @media (max-width: 768px) {
-  .footer-container {
-    /* display: flex; */
-grid-template-columns: repeat(2, 1fr) 2fr;
-    gap: 0.5em;
-    padding: 0 0.5em;
-  }
+ .footer {
+  background-color: #3b2a00;
+  color: #fefdfa;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px 20px 10px;
+}
 
-  .footer-contact{
-    display: inline;
-  }
-  .footer-about h3,
-  .footer-links h4,
-  .footer-contact h4 {
-    font-size: 1em;
-    text-align: left;
-  }
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 
-  .footer-about p,
-  .footer-contact p,
-  .footer-links ul li a {
-    font-size: 0.85em !important;
-    /* line-height: 1.6; */
-  }
+.footer-section h2 {
+  font-size: 1.4rem;
+  color: #ffd369;
+  margin-bottom: 8px;
+}
 
-  .footer-links ul {
-    padding-left: 0;
-  }
+.footer-section h3 {
+  font-size: 1.2rem;
+  color: #f8c471;
+  margin-bottom: 10px;
+}
 
-  .footer-social {
-    margin-top: 10px;
-  }
+.footer-section p,
+.footer-section li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #fefdfa;
+}
 
-  .footer-social a {
-    font-size: 1.5rem;
-    margin-right: 15px;
-  }
+.footer-section a {
+  color: #fefdfa;
+  text-decoration: none;
+}
 
-  .footer-bottom {
-    font-size: 0.9rem;
-    padding: 15px 10px;
-    text-align: center;
-    flex-direction: column;
-  }
+.footer-section a:hover {
+  text-decoration: underline;
+  color: #ffd369;
+}
 
-  .footer-bottom a.Abhi {
-    display: block;
-    margin-top: 8px;
-    font-size: 1rem;
-  }
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid #ffffff2d;
+  padding-top: 12px;
+  margin-top: 20px;
+  color: #f8f8f8;
+}
+
+.footer-bottom a {
+  color: #ffd369;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #ffd369;
+}
+
+.brand {
+  color: #fdd835;
+}
+
 }
