@@ -113,12 +113,62 @@ font-size: 1.2em;
 }
 .nav-join{
   display: inline;
+  justify-content: end;
 }
 
   .nav-link {
     padding: 0.4em 0.8em;
     /* margin: 0.2em 0; */
     font-size: 0.65em;
+  }
+  .navjoin.nav-link{
+  padding: 0.2em;
+}
+  .navbar-brand img{
+  height: 3.2em;
+  }
+}
+@media(max-width:400px){
+  .navbar-container {
+    width: 100%;
+    background-color: #8B4513;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2em;
+    height: 4em;
+  }
+
+  .nav-left{
+    display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin: 0;
+  }
+  .nav-social{
+    display: flex;
+    gap: 0.3em;
+    margin: 0;
+  }
+  .nav-social a{
+font-size: 1.2em;
+
+  }
+  .nav-links 
+{
+  display:flex;
+  flex-direction: row;
+  gap: 0.28em;
+
+}
+.nav-join{
+  display: inline;
+  justify-content: end;
+}
+
+  .nav-link {
+    padding: 0.4em 0.8em;
+    /* margin: 0.2em 0; */
+    font-size: 0.55em;
   }
   .navjoin.nav-link{
   padding: 0.2em;
