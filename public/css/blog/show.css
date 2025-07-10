@@ -81,3 +81,24 @@
   padding: 0;
   display: inline;
 }
+.btn-action {
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #eee;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-like {
+  background-color: #ffcccc;
+}
+
+.btn-comment {
+  background-color: #ccffcc;
+}
+
+.comment-form input, .comment-form textarea {
+  width: 100%;
+  font-size: 1em;
+  padding: 8px;
+}

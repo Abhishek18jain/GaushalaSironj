@@ -19,6 +19,36 @@
   </form>
 </div>
 <%}%>
+<hr style="margin-top: 40px;">
+
+<!-- LIKE SECTION -->
+<form action="/blogs/<%= blog._id %>/like" method="POST">
+  <button class="btn-action btn-like" style="margin-bottom: 15px;">❤️ Like (<%= blog.likes %>)</button>
+</form>
+
+<!-- COMMENT SECTION -->
+<h3>Comments</h3>
+<div class="comments">
+  <% blog.comments.forEach(c => { %>
+    <div style="margin-bottom: 10px;">
+      <strong><%= c.name %>:</strong> <%= c.text %>
+    </div>
+  <% }) %>
 </div>
+
+<!-- ADD NEW COMMENT -->
+<h4>Add Comment</h4>
+<form action="/blogs/<%= blog._id %>/comment" method="POST" class="comment-form">
+  <input name="name" placeholder="Your Name (optional)" style="display:block; margin-bottom:10px;">
+  <textarea name="text" placeholder="Your comment..." required style="width:100%; height:100px;"></textarea>
+  <button type="submit" class="btn-action btn-comment" style="margin-top:10px;">Post Comment</button>
+</form>
+
+</div>
+<script>
+  window.blogData = <%- JSON.stringify(blog) %>;
+  console.log("Blog in browser:", window.blogData);
+</script>
+
 </body>
 <%- include('../particles/footer') %>
