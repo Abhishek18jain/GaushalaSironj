@@ -60,20 +60,20 @@ app.use("/blogs",blogRoutes)
 app.use('/', adminRoutes);
 app.use("/gallery",galleryRoutes)
 
-// app.use((req, res, next) => {
-//   res.status(404).render("error", { message: "Page Not Found", status: 404 });
-// });
-// app.use((err, req, res, next) => {
-//   const status = err.status || 500;
+app.use((req, res, next) => {
+  res.status(404).render("error", { message: "Page Not Found", status: 404 });
+});
+app.use((err, req, res, next) => {
+  const status = err.status || 500;
 
-//   // Fallback message if error.message is not a string
-//   let message = "Something went wrong!";
-//   if (err && typeof err.message === 'string') {
-//     message = err.message;
-//   }
+  // Fallback message if error.message is not a string
+  let message = "Something went wrong!";
+  if (err && typeof err.message === 'string') {
+    message = err.message;
+  }
 
-//   res.status(status).render("error.ejs", { status, message });
-// });
+  res.status(status).render("error.ejs", { status, message });
+});
 
 
 app.listen(port,()=>{
