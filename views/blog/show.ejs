@@ -12,7 +12,7 @@
 <% if(currentUser){%>
 <div class="blog-actions">
   <form action="/blogs/<%= blog._id %>/edit" method="GET" class="btn-edit-form">
-    <button type="submit" class="btn-action btn-edit">✏️ Edit</button>
+    <button type="submit" class="btn-action btn-edit" >✏️ Edit</button>
   </form> 
   <form action="/blogs/<%= blog._id %>/delete" method="POST" class="btn-delete-form">
     <button type="submit" class="btn-action btn-delete">🗑️ Delete</button>
@@ -23,32 +23,35 @@
 
 <!-- LIKE SECTION -->
 <form action="/blogs/<%= blog._id %>/like" method="POST">
-  <button class="btn-action btn-like" style="margin-bottom: 15px;">❤️ Like (<%= blog.likes %>)</button>
+  <button class="btn-action btn-like" style="margin-bottom: 15px; margin-top: 1rem;" >❤️ Like (<%= blog.likes %>)</button>
 </form>
 
 <!-- COMMENT SECTION -->
 <h3>Comments</h3>
+<hr>
 <div class="comments">
-  <% blog.comments.forEach(c => { %>
-    <div style="margin-bottom: 10px;">
-      <strong><%= c.name %>:</strong> <%= c.text %>
-    </div>
+<ul>
+  <% blog.comments.forEach(function(comment) { %>
+    <li style="margin-bottom:10px; margin-top: 1rem; display: flex;" >
+      <%= comment.text %>
+      <% if (currentUser) { %>
+        <form action="/blogs/<%= blog._id %>/comments/<%= comment._id %>/delete" method="POST" style="display:inline;">
+          <button type="submit" onclick="return confirm('Delete this comment?')">🗑️ Delete</button>
+        </form>
+      <% } %>
+    </li>
   <% }) %>
+</ul>
 </div>
 
 <!-- ADD NEW COMMENT -->
-<h4>Add Comment</h4>
+
+<h4 style="margin-top: 1rem;">Add Comment</h4>
 <form action="/blogs/<%= blog._id %>/comment" method="POST" class="comment-form">
   <input name="name" placeholder="Your Name (optional)" style="display:block; margin-bottom:10px;">
   <textarea name="text" placeholder="Your comment..." required style="width:100%; height:100px;"></textarea>
   <button type="submit" class="btn-action btn-comment" style="margin-top:10px;">Post Comment</button>
 </form>
-
 </div>
-<script>
-  window.blogData = <%- JSON.stringify(blog) %>;
-  console.log("Blog in browser:", window.blogData);
-</script>
-
 </body>
 <%- include('../particles/footer') %>

@@ -47,6 +47,20 @@ router.post('/:id/comment', wrapAsync(async (req, res) => {
   });
   res.redirect(`/blogs/${req.params.id}`);
 }));
+//delete comment
+// DELETE comment (Admin Only)
+router.post('/:id/comments/:commentId/delete', isAdmin, isLoggedIn, wrapAsync(async (req, res) => {
+  const { id, commentId } = req.params;
+
+  // Remove the comment by $pull
+  await Blog.findByIdAndUpdate(id, {
+    $pull: { comments: { _id: commentId } }
+  });
+
+  req.flash('success', 'Comment deleted.');
+  res.redirect(`/blogs/${id}`);
+}));
+
 
 
 module.exports = router;
